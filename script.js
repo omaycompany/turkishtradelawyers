@@ -156,8 +156,9 @@ window.addEventListener('beforeunload', () => {
     window.scrollTo(0, 0);
 });
 
-// Dynamic Hero Title
+// Dynamic Hero Title & Team Page Card Expansion
 document.addEventListener('DOMContentLoaded', () => {
+    // Dynamic Hero Title
     const keywords = [
         "Market Entry", "Financial Interests", "Compliance Standards",
         "Strategic Moves", "Contracts", "Transactions",
@@ -178,4 +179,19 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 500);
         }, 3000);
     }
+
+    // Team Page Card Expansion
+    const teamCardsPage = document.querySelectorAll('.team-card-page');
+
+    teamCardsPage.forEach(card => {
+        card.addEventListener('click', () => {
+            const wasActive = card.classList.contains('active');
+
+            teamCardsPage.forEach(c => c.classList.remove('active'));
+
+            if (!wasActive) {
+                card.classList.add('active');
+            }
+        });
+    });
 });

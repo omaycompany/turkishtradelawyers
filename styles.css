@@ -1564,3 +1564,89 @@ a {
 .guide-card:hover .guide-card-readmore i {
     transform: translateX(4px);
 }
+
+/* Team Page Styles */
+.team-page {
+    background-color: var(--light-gray);
+}
+
+.team-grid-page {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-card-page {
+    background: var(--white);
+    border-radius: 16px;
+    border: 1px solid var(--border-gray);
+    padding: 24px;
+    cursor: pointer;
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.team-card-page:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    border-color: var(--primary-blue);
+}
+
+.team-card-page.active {
+    box-shadow: 0 12px 32px rgba(45, 76, 200, 0.15);
+}
+
+.team-card-page-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.team-card-page .team-image-wrapper {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--primary-blue);
+}
+
+.team-card-page .team-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-name-page {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.team-title-page {
+    font-size: 1rem;
+    color: var(--primary-blue);
+    font-weight: 500;
+}
+
+.team-card-page-body {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out, margin-top 0.5s ease-out;
+    margin-top: 0;
+}
+
+.team-card-page.active .team-card-page-body {
+    max-height: 1000px; /* Large enough to fit content */
+    opacity: 1;
+    margin-top: 24px; /* Space between header and body */
+}
+
+.team-card-page-body p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-gray);
+}
