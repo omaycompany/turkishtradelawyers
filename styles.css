@@ -1447,28 +1447,13 @@ a {
 
 /* Guides Page (Blog Index) Styles */
 .guides-section {
-    background-color: #f8f8f8; /* Light off-white background */
+    background: var(--light-gray);
     padding: 100px 0;
 }
 
 .guides-header {
     text-align: center;
     margin-bottom: 80px;
-}
-
-.guides-header h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    color: #1A3D5B; /* Corporate Primary Color */
-    margin-bottom: 16px;
-}
-
-.guides-header p {
-    font-size: 1.25rem;
-    color: #4B5563; /* Lighter gray for intro text */
-    max-width: 700px;
-    margin: 0 auto;
-    line-height: 1.6;
 }
 
 .guides-grid {
@@ -1512,7 +1497,7 @@ a {
     display: block;
     font-size: 0.75rem;
     font-weight: 600;
-    color: #D9A400; /* Corporate Accent Color */
+    color: var(--primary-blue);
     text-transform: uppercase;
     margin-bottom: 8px;
 }
@@ -1520,7 +1505,7 @@ a {
 .guide-card-title {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #1A3D5B; /* Corporate Primary Color */
+    color: var(--text-dark);
     margin-bottom: 12px;
     line-height: 1.4;
 }
@@ -1545,7 +1530,7 @@ a {
 }
 
 .guide-card-readmore {
-    color: #D9A400; /* Corporate Accent Color */
+    color: var(--primary-blue);
     font-weight: 500;
     display: flex;
     align-items: center;
