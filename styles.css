@@ -23,7 +23,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     line-height: 1.7;
     color: var(--text-gray);
     overflow-x: hidden;
@@ -1398,7 +1398,7 @@ a {
     margin-bottom: 24px;
     padding-bottom: 10px;
     border-bottom: 2px solid var(--primary-blue);
-    font-family: 'Lora', serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .article-content h4 {
@@ -1414,7 +1414,7 @@ a {
     line-height: 1.8;
     color: var(--text-gray);
     margin-bottom: 20px;
-    font-family: 'Lora', serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .article-content em {
@@ -1433,7 +1433,7 @@ a {
     margin-bottom: 12px;
     padding-left: 20px;
     position: relative;
-    font-family: 'Lora', serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .bibliography-list li::before {
