@@ -1443,3 +1443,118 @@ a {
     color: var(--primary-blue);
     font-weight: bold;
 }
+
+/* Guides Page (Blog Index) Styles */
+.guides-section {
+    background-color: #f8f8f8; /* Light off-white background */
+    padding: 100px 0;
+}
+
+.guides-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.guides-header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #1A3D5B; /* Corporate Primary Color */
+    margin-bottom: 16px;
+}
+
+.guides-header p {
+    font-size: 1.25rem;
+    color: #4B5563; /* Lighter gray for intro text */
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.guides-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+/* Responsive Grid */
+@media (min-width: 768px) {
+    .guides-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .guides-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.guide-card {
+    background-color: var(--white);
+    border-radius: 16px;
+    border: 1px solid var(--border-gray);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+}
+
+.guide-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.guide-card-category {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #D9A400; /* Corporate Accent Color */
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.guide-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1A3D5B; /* Corporate Primary Color */
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.guide-card-description {
+    font-size: 0.95rem;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+.guide-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+}
+
+.guide-card-date {
+    color: #6B7280; /* Medium gray */
+}
+
+.guide-card-readmore {
+    color: #D9A400; /* Corporate Accent Color */
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.guide-card-readmore i {
+    margin-left: 4px;
+    transition: transform 0.2s ease;
+}
+
+.guide-card:hover .guide-card-readmore i {
+    transform: translateX(4px);
+}
