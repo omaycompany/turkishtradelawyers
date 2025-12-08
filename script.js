@@ -156,3 +156,26 @@ window.addEventListener('beforeunload', () => {
     window.scrollTo(0, 0);
 });
 
+// Dynamic Hero Title
+document.addEventListener('DOMContentLoaded', () => {
+    const keywords = [
+        "Market Entry", "Financial Interests", "Compliance Standards",
+        "Strategic Moves", "Contracts", "Transactions",
+        "Cross-Border Deals", "Supply Chain", "Trade Flows",
+        "Business Operations", "Investments", "Intellectual Assets", "Legal Rights"
+    ];
+    const dynamicKeywordSpan = document.getElementById('dynamic-keyword');
+    let currentIndex = 0;
+
+    if (dynamicKeywordSpan) {
+        setInterval(() => {
+            dynamicKeywordSpan.style.opacity = '0';
+
+            setTimeout(() => {
+                currentIndex = (currentIndex + 1) % keywords.length;
+                dynamicKeywordSpan.textContent = keywords[currentIndex];
+                dynamicKeywordSpan.style.opacity = '1';
+            }, 500);
+        }, 3000);
+    }
+});
