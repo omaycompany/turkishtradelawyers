@@ -400,6 +400,11 @@ a {
     font-weight: 700;
 }
 
+#dynamic-keyword {
+    color: var(--primary-blue);
+    transition: opacity 0.5s ease-in-out;
+}
+
 .hero-tagline {
     font-size: 1.25rem;
     color: var(--text-gray);
