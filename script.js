@@ -168,14 +168,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const dynamicKeywordSpan = document.getElementById('dynamic-keyword');
     let currentIndex = 0;
 
-    if (dynamicKeywordSpan) {
+    const heroTitle = document.querySelector('.hero-title');
+    if (dynamicKeywordSpan && heroTitle) {
         setInterval(() => {
             dynamicKeywordSpan.style.opacity = '0';
 
             setTimeout(() => {
                 currentIndex = (currentIndex + 1) % keywords.length;
-                dynamicKeywordSpan.textContent = keywords[currentIndex];
+                const newKeyword = keywords[currentIndex];
+                dynamicKeywordSpan.textContent = newKeyword;
                 dynamicKeywordSpan.style.opacity = '1';
+
+                if (newKeyword.length > 18) {
+                    heroTitle.classList.add('long-word');
+                } else {
+                    heroTitle.classList.remove('long-word');
+                }
             }, 500);
         }, 3000);
     }

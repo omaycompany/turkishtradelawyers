@@ -400,6 +400,16 @@ a {
     font-weight: 700;
 }
 
+.hero-title.long-word {
+    font-size: 3.2rem;
+}
+
+.hero-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #dynamic-keyword {
     color: var(--primary-blue);
     transition: opacity 0.5s ease-in-out;
