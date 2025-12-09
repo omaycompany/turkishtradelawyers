@@ -179,6 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 dynamicKeywordSpan.textContent = newKeyword;
                 dynamicKeywordSpan.style.opacity = '1';
 
+                // Adjust font size for long words
                 if (newKeyword.length > 18) {
                     heroTitle.classList.add('long-word');
                 } else {
