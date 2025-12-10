@@ -188,18 +188,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3000);
     }
 
-    // Team Page Card Expansion
-    const teamCardsPage = document.querySelectorAll('.team-card-page');
-
-    teamCardsPage.forEach(card => {
-        card.addEventListener('click', () => {
-            const wasActive = card.classList.contains('active');
-
-            teamCardsPage.forEach(c => c.classList.remove('active'));
-
-            if (!wasActive) {
-                card.classList.add('active');
-            }
-        });
-    });
 });
