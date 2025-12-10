@@ -1,15 +1,30 @@
-import time
-from playwright.sync_api import sync_playwright
+
+import asyncio
+from playwright.async_api import async_playwright
 import os
 
-with sync_playwright() as p:
-    browser = p.chromium.launch()
-    page = browser.new_page()
-    # Construct the file path using os.path.join for compatibility
-    file_path = os.path.join(os.getcwd(), 'index.html')
-    page.goto(f'file://{file_path}')
-    # Add a delay to allow the dynamic text to change to a long word
-    time.sleep(9)
-    hero_section = page.locator('.hero-title')
-    hero_section.screenshot(path='hero-screenshot-long.png')
-    browser.close()
+async def main():
+    async with async_playwright() as p:
+        browser = await p.chromium.launch()
+        page = await browser.new_page()
+
+        # Construct the absolute file path
+        file_path = "file://" + os.path.abspath("index.html")
+
+        await page.goto(file_path)
+
+        # Wait for the hero section to be visible
+        await page.wait_for_selector('.hero')
+
+        # Take a screenshot of the hero section
+        hero_element = await page.query_selector('.hero')
+        await hero_element.screenshot(path="hero-screenshot.png")
+
+        # Take a screenshot of a long word in the hero section
+        await page.evaluate('document.getElementById("dynamic-keyword").textContent = "Intellectual Assets"')
+        await hero_element.screenshot(path="hero-screenshot-long.png")
+
+        await browser.close()
+
+if __name__ == "__main__":
+    asyncio.run(main())
