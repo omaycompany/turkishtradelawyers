@@ -1588,6 +1588,12 @@ a {
     margin: 0 auto;
 }
 
+.team-grid-page.top-row {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+    margin-bottom: 32px;
+}
+
 .team-card-page {
     background: var(--white);
     border-radius: 16px;
