@@ -178,12 +178,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 const newKeyword = keywords[currentIndex];
                 dynamicKeywordSpan.textContent = newKeyword;
                 dynamicKeywordSpan.style.opacity = '1';
-
-                if (newKeyword.length > 18) {
-                    heroTitle.classList.add('long-word');
-                } else {
-                    heroTitle.classList.remove('long-word');
-                }
             }, 500);
         }, 3000);
     }
