@@ -1587,6 +1587,14 @@ a {
     background-color: var(--light-gray);
 }
 
+.team-grid-top-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto 32px;
+}
+
 .team-grid-page {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
