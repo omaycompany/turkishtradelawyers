@@ -1593,7 +1593,6 @@ a {
     border-radius: 16px;
     border: 1px solid var(--border-gray);
     padding: 24px;
-    cursor: pointer;
     transition: var(--transition);
     overflow: hidden;
 }
@@ -1602,10 +1601,6 @@ a {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
     border-color: var(--primary-blue);
-}
-
-.team-card-page.active {
-    box-shadow: 0 12px 32px rgba(45, 76, 200, 0.15);
 }
 
 .team-card-page-header {
@@ -1642,16 +1637,6 @@ a {
 }
 
 .team-card-page-body {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out, opacity 0.5s ease-out, margin-top 0.5s ease-out;
-    margin-top: 0;
-}
-
-.team-card-page.active .team-card-page-body {
-    max-height: 1000px; /* Large enough to fit content */
-    opacity: 1;
     margin-top: 24px; /* Space between header and body */
 }
 
