@@ -1917,3 +1917,370 @@ a {
     line-height: 1.7;
     color: var(--text-gray);
 }
+
+/* =========================================
+   Team Page Redesign V2 (New Design)
+   ========================================= */
+
+.team-page-v2 {
+    background-color: #FAFBFC;
+    padding-bottom: 100px;
+}
+
+/* Hero Section */
+.team-hero {
+    background-color: var(--dark-blue);
+    padding: 120px 0 160px;
+    /* Extra padding bottom for overlap if needed, or just spacious */
+    text-align: center;
+    color: var(--white);
+    position: relative;
+}
+
+.team-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.team-hero-icon {
+    font-size: 2.5rem;
+    color: #FCD34D;
+    /* Amber/Gold icon */
+    margin-bottom: 24px;
+    opacity: 0.9;
+}
+
+.team-hero h1 {
+    color: var(--white);
+    font-size: 3.5rem;
+    margin-bottom: 24px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    font-family: 'Inter', serif;
+    /* Trying to mimic the premium feel if possible, but sticking to Inter */
+}
+
+.team-hero p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Founders Section */
+.founders-section {
+    margin-top: -80px;
+    /* Pull up into hero space if desired, or just start normal */
+    margin-top: 0;
+    /* Let's keep it clean */
+    padding: 60px 0;
+    position: relative;
+    z-index: 5;
+}
+
+.section-label-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.section-label {
+    background-color: #FEF3C7;
+    /* Light Amber */
+    color: #92400E;
+    /* Dark Amber */
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.section-headline {
+    text-align: center;
+    font-family: 'Inter', serif;
+    font-size: 2.5rem;
+    color: var(--dark-blue);
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.section-underline {
+    width: 60px;
+    height: 4px;
+    background-color: #D97706;
+    /* Amber */
+    margin: 0 auto 60px;
+    border-radius: 2px;
+}
+
+.founders-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.founder-card {
+    background: var(--white);
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.founder-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Founders Grid Image Update */
+.founder-image-container {
+    height: 380px;
+    /* Increased height for better photo display */
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.founder-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    /* Center horizontally, 20% from top to show faces better */
+    transition: transform 0.5s ease;
+}
+
+/* Senior Counsel Image Update */
+.partner-img-wrapper {
+    height: 320px;
+    /* Matching height for equality */
+    overflow: hidden;
+    width: 100%;
+}
+
+.partner-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;
+    /* Slightly higher to show heads properly aligned */
+    transition: transform 0.5s ease;
+}
+
+.founder-card:hover .founder-image-container img {
+    transform: scale(1.05);
+}
+
+.founder-content {
+    padding: 32px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.founder-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #F3F4F6;
+    padding-bottom: 16px;
+}
+
+.founder-names {
+    flex: 1;
+}
+
+.founder-names h3 {
+    font-size: 1.5rem;
+    color: var(--dark-blue);
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+
+.founder-names .role {
+    color: #D97706;
+    /* Amber */
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.founder-badge {
+    background-color: #FEF3C7;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #D97706;
+    font-size: 1.1rem;
+    margin-left: 16px;
+}
+
+.founder-bio {
+    font-size: 0.95rem;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin-bottom: 24px;
+    flex: 1;
+}
+
+.founder-details {
+    margin-bottom: 24px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    color: #6B7280;
+}
+
+.detail-item i {
+    color: #D97706;
+    width: 20px;
+    text-align: center;
+}
+
+.founder-footer {
+    padding-top: 16px;
+    border-top: 1px solid #F3F4F6;
+    display: flex;
+    gap: 16px;
+}
+
+.social-link {
+    color: #9CA3AF;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+.social-link:hover {
+    color: var(--primary-blue);
+}
+
+/* Senior Counsel Section */
+.senior-section {
+    padding: 80px 0;
+    background-color: #F9FAFB;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.partner-card {
+    background: var(--white);
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.partner-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Duplicate rules removed to enforce standardized height */
+
+.partner-card:hover .partner-img-wrapper img {
+    transform: scale(1.05);
+}
+
+.partner-content {
+    padding: 24px;
+}
+
+.partner-name {
+    font-size: 1.25rem;
+    color: var(--dark-blue);
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.partner-title {
+    color: #D97706;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.partner-bio-short {
+    font-size: 0.9rem;
+    color: #4B5563;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.partner-specs {
+    font-size: 0.8rem;
+    color: #6B7280;
+}
+
+.spec-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.spec-row i {
+    color: #D97706;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 1024px) {
+    .founders-grid {
+        gap: 20px;
+    }
+
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .founders-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .partners-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+
+    .founder-image-container {
+        height: 300px;
+    }
+
+    .team-hero h1 {
+        font-size: 2.5rem;
+    }
+}

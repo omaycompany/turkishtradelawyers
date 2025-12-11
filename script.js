@@ -145,8 +145,12 @@ const intersectionCallback = (entries) => {
 const intersectionObserver = new IntersectionObserver(intersectionCallback, observerOptions);
 
 // Observe all animated elements
+    // Observe all animated elements
 setTimeout(() => {
-    document.querySelectorAll('.service-card, .why-us-item, .contact-item, .hero-feature, .hero-badge, .team-card').forEach(el => {
+    document.querySelectorAll('.service-card, .why-us-item, .contact-item, .hero-feature, .hero-badge, .team-card, .founder-card, .partner-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
         intersectionObserver.observe(el);
     });
 }, 100);
