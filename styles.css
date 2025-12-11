@@ -1715,6 +1715,7 @@ a {
 }
 
 .form-group input,
+.form-group textarea,
 .form-group select {
     width: 100%;
     padding: 14px 16px;
@@ -1732,6 +1733,7 @@ a {
 }
 
 .form-group input:focus,
+.form-group textarea:focus,
 .form-group select:focus {
     outline: none;
     border-color: var(--primary-blue);
@@ -1745,6 +1747,11 @@ a {
     background-repeat: no-repeat;
     background-position: right 16px center;
     cursor: pointer;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
 }
 
 .form-submit-btn {

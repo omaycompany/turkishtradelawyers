@@ -145,7 +145,7 @@ const intersectionCallback = (entries) => {
 const intersectionObserver = new IntersectionObserver(intersectionCallback, observerOptions);
 
 // Observe all animated elements
-    // Observe all animated elements
+// Observe all animated elements
 setTimeout(() => {
     document.querySelectorAll('.service-card, .why-us-item, .contact-item, .hero-feature, .hero-badge, .team-card, .founder-card, .partner-card').forEach(el => {
         el.style.opacity = '0';
@@ -184,6 +184,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 dynamicKeywordSpan.style.opacity = '1';
             }, 500);
         }, 3000);
+    }
+
+    // Contact Form Security Question Validation
+    const contactForm = document.getElementById('consultation-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            const securityAnswer = document.getElementById('security-answer').value;
+            // Simple check for "3 + 4"
+            if (securityAnswer.trim() !== '7') {
+                e.preventDefault();
+                alert('Please provide the correct answer to the security question (3 + 4).');
+                document.getElementById('security-answer').focus();
+            }
+        });
     }
 
 });
